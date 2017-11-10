@@ -1,0 +1,100 @@
+<ion-content>
+    <ion-grid>
+        <ion-row>
+            <!-- TODO -->
+            <!-- Set some cool image -->
+            <h2>Some header</h2>
+        </ion-row>
+        <ion-row>
+            <ion-segment [(ngModel)]="authMode">
+                <ion-segment-button value="signIn">
+                    Sign in
+                </ion-segment-button>
+                <ion-segment-button value="signUp">
+                    Singn up
+                </ion-segment-button>
+            </ion-segment>
+        </ion-row>
+        <div [ngSwitch]="authMode">
+            <div *ngSwitchCase="'signIn'">
+                <ion-row>
+                    <ion-col col-6>
+                        <button class="btn-full-width" ion-button>Facebook</button>
+                    </ion-col>
+                    <ion-col col-6>
+                        <button class="btn-full-width" ion-button>Google</button>
+                    </ion-col>
+                </ion-row>
+                <ion-row>
+                    <div class="div-text-center">
+                        Or
+                    </div>
+                </ion-row>
+                <ion-row>
+                    <ion-item>
+                        <ion-label floating>
+                            Email
+                        </ion-label>
+                        <ion-input type="email"></ion-input>
+                    </ion-item>
+                </ion-row>
+                <ion-row>
+                    <ion-item>
+                        <ion-label floating>
+                            Password
+                        </ion-label>
+                        <ion-input type="password"></ion-input>
+                    </ion-item>
+                </ion-row>
+                <ion-row>
+                    <div class="div-text-center">
+                        Do you forget a password?
+                    </div>
+                </ion-row>
+                <ion-row>
+                    <button class="btn-full-width" ion-button>Log in</button>
+                </ion-row>
+            </div>
+            <div *ngSwitchCase="'signUp'">
+                <ion-row>
+                    <h2>Sign in</h2>
+                </ion-row>
+                <ion-row>
+                    <ion-item>
+                        <ion-label floating>
+                            Name
+                        </ion-label>
+                        <ion-input type="text"></ion-input>
+                    </ion-item>
+                </ion-row>
+                <ion-row>
+                    <ion-item>
+                        <ion-label floating>
+                            Lastname
+                        </ion-label>
+                        <ion-input type="text"></ion-input>
+                    </ion-item>
+                </ion-row>
+                <ion-row>
+                    <ion-item>
+                        <ion-label floating>
+                            Email
+                        </ion-label>
+                        <ion-input type="email"></ion-input>
+                    </ion-item>
+                </ion-row>
+                <ion-row>
+                    <ion-item>
+                        <ion-label floating>
+                            Password
+                        </ion-label>
+                        <ion-input type="password"></ion-input>
+                    </ion-item>
+                </ion-row>
+                <ion-row>
+                    <button class="btn-full-width" ion-button>Sign in in</button>
+                </ion-row>
+            </div>
+        </div>
+    </ion-grid>
+</ion-content>
